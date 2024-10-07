@@ -15,10 +15,12 @@ function compareNumbers(){
 
    if(userNumber > computerNumber){
     document.getElementById('textOutput').innerHTML = 'Seu número está muito alto'
+    document.getElementById('inputBox').value = ''
 
    }
    else if(userNumber < computerNumber){
     document.getElementById('textOutput').innerHTML = 'Seu número está muito baixo'
+    document.getElementById('inputBox').value = ''
 
    }
    else{
