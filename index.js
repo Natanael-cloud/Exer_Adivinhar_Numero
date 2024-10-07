@@ -1,6 +1,13 @@
 let computerNumber
-
+let userNumbers = []
 
 function init(){
-    Math.floor(Math.random() * 100 + 1)
+    computerNumber = Math.floor(Math.random() * 100 + 1)
+    console.log(computerNumber)
+}
+
+
+function compareNumbers(){
+    Number(document.getElementById('inputBox').value)
+
 }
