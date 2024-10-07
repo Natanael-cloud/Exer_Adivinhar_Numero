@@ -1,1 +1,4 @@
 let computerNumber
+
+
+function init()
