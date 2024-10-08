@@ -7,30 +7,57 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body onload="init()">
+    <!-- Quando a página carregar, a função `init()` será chamada para inicializar o jogo -->
+    
     <main>
-        <div id="welcomeScreen">
-          <h2>Adivinhar Número <br />1 - 100</h2>
-        </div>
+      <!-- Seção principal que contém a interface do jogo -->
+      
+      <div id="welcomeScreen">
+        <!-- Div que exibe a tela inicial com o título do jogo -->
+        <h2>Adivinhar Número <br />1 - 100</h2>
+        <!-- Título que informa ao usuário que ele deve adivinhar um número entre 1 e 100 -->
+      </div>
   
-        <div id="gameArea">
-          <section>
-            <h3 id="textOutput">Seu Palpite:</h3>
-            <input type="number" id="inputBox" min="1" max="100" onchange="compareNumbers()"/>
-          </section>
-          <section class="stats">
-            <div class="info">
-              <p>Número de Tentativas:</p>
-              <span id="attempts"></span>
-            </div>
-            <div class="info">
-              <p>Palpites até agora:</p>
-              <span id="guesses"></span>
-            </div>
-          </section>
-          <button id="newGameButton" onclick="newGame()">NEW GAME</button>
-        </div>
-      </main>
-      <script src="index.js"></script>
+      <div id="gameArea">
+        <!-- Área principal do jogo que será exibida após a tela de boas-vindas -->
+        
+        <section>
+          <!-- Seção que contém o campo de entrada e o texto informativo sobre o palpite do jogador -->
+          <h3 id="textOutput">Seu Palpite:</h3>
+          <!-- Exibe uma mensagem para o jogador, inicialmente "Seu Palpite" -->
+          
+          <input type="number" id="inputBox" min="1" max="100" onchange="compareNumbers()"/>
+          <!-- Campo de entrada numérico para o usuário inserir seu palpite entre 1 e 100 -->
+          <!-- A função `compareNumbers()` será chamada quando o valor do campo mudar -->
+        </section>
+  
+        <section class="stats">
+          <!-- Seção que exibe as estatísticas do jogo, como número de tentativas e palpites -->
+          
+          <div class="info">
+            <!-- Div que mostra o número de tentativas realizadas -->
+            <p>Número de Tentativas:</p>
+            <span id="attempts"></span>
+            <!-- O elemento `span` onde será exibido o número de tentativas do jogador -->
+          </div>
+  
+          <div class="info">
+            <!-- Div que mostra os palpites anteriores do jogador -->
+            <p>Palpites até agora:</p>
+            <span id="guesses"></span>
+            <!-- O elemento `span` onde será exibida a lista de palpites já feitos -->
+          </div>
+        </section>
+  
+        <button id="newGameButton" onclick="newGame()">NEW GAME</button>
+        <!-- Botão para iniciar um novo jogo. Quando clicado, a função `newGame()` será chamada -->
+      </div>
+    </main>
+    
+    <script src="index.js"></script>
+    <!-- O script externo `index.js` é carregado, onde a lógica do jogo é definida -->
+
+  
     
 </body>
 </html>
